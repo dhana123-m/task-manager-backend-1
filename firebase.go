@@ -2,7 +2,9 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"log"
+	"os"
 
 	firebase "firebase.google.com/go"
 	"google.golang.org/api/option"
@@ -11,11 +13,13 @@ import (
 var App *firebase.App
 
 func InitFirebase() {
-	opt := option.WithCredentialsFile("serviceAccountKey.json")
+	key := os.Getenv("FIREBASE_CREDENTIALS")
+
+	opt := option.WithCredentialsJSON([]byte(key))
 
 	app, err := firebase.NewApp(context.Background(), nil, opt)
 	if err != nil {
-		log.Fatalf("Firebase init error: %v", err)
+		log.Fatal(err)
 	}
 
 	App = app
