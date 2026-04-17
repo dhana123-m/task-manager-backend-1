@@ -4,6 +4,7 @@ go 1.26.2
 
 require (
 	firebase.google.com/go v3.13.0+incompatible
+    firebase.google.com/go/v4 v4.19.0
 	github.com/gin-gonic/gin v1.12.0
 	google.golang.org/api v0.276.0
 )
