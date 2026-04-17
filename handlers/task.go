@@ -6,7 +6,7 @@ import (
 
 	"task-manager/models"
 
-	"firebase.google.com/go/db"
+	"firebase.google.com/go/v4/db"
 	"github.com/gin-gonic/gin"
 )
 
