@@ -14,7 +14,8 @@ func main() {
 
 	ctx := context.Background()
 
-	client, err := App.DatabaseWithURL(ctx, "https://fir-dcc97-default-rtdb.asia-southeast1.firebasedatabase.app")
+	dbURL := "https://fir-dcc97-default-rtdb.asia-southeast1.firebasedatabase.app"
+	client, err := App.DatabaseWithURL(ctx, dbURL)
 	if err != nil {
 		log.Fatalf("DB error: %v", err)
 	}
