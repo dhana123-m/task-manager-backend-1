@@ -3,6 +3,12 @@ module task-manager
 go 1.26.2
 
 require (
+	firebase.google.com/go v3.13.0+incompatible
+	github.com/gin-gonic/gin v1.12.0
+	google.golang.org/api v0.276.0
+)
+
+require (
 	cel.dev/expr v0.25.1 // indirect
 	cloud.google.com/go v0.123.0 // indirect
 	cloud.google.com/go/auth v0.20.0 // indirect
